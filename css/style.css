@@ -1,0 +1,49 @@
+:root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+
+body{
+    color: white;
+}
+.menu{
+    position: fixed;
+    left: -250px;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 1;
+    transition: 0.5s;
+}
+.menu .menu-control{
+    background-color: #e7e7e7;
+    width: 60px;
+    height: 100%;
+}
+
+.menu .icons i{
+    cursor: pointer;
+}
+.menu .links li {
+    top: 200px;
+    text-decoration: none;
+    transition: 0.3s;
+    list-style: none;
+    cursor: pointer;
+}
+
+.card .filter{
+    transition: 0.5s !important;
+    cursor: pointer;
+}
+.card:hover .filter{
+    top: 0 !important;
+}
+.area{
+    cursor: pointer;
+}
+
+
+.form-control::placeholder{
+    color: #777;
+}

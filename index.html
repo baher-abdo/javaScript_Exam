@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/logo.png">
+  </head>
+  <body class="bg-black">
+    <div id="loader" class="loader position-fixed top-0 bottom-0 start-0 end-0 bg-dark d-flex align-items-center justify-content-evenly z-3">
+      <svg xmlns="http://www.w3.org/2000/svg" style="width: 100px;" viewBox="0 0 200 200"><circle fill="none" stroke-opacity="1" stroke="#FFFFFF" stroke-width=".5" cx="100" cy="100" r="0"><animate attributeName="r" calcMode="spline" dur="0.7" values="1;80" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-width" calcMode="spline" dur="0.7" values="0;25" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" calcMode="spline" dur="0.7" values="1;0" keyTimes="0;1" keySplines="0 .2 .5 1" repeatCount="indefinite"></animate></circle></svg>
+    </div>
+    <main>
+      <section class="vh-100 position-relative">
+        <div class="side-menu">
+          <div class="menu bg-black">
+            <div class="menu-control position-absolute start-100">
+                <div class="icons d-flex flex-column align-items-center justify-content-between h-100 py-4">
+                  <div class="logo px-2">
+                    <img class="img-fluid" src="images/logo.png" alt="logo">
+                  </div>
+                  <div class="bars">
+                    <span id="bars" class="text-black"><i class="fa-solid fa-bars fs-1"></i></span>
+                  </div>
+                  <div class="share">
+                    <span><i class="fa-solid fa-globe fs-5 pb-2 text-black"></i></span><br>
+                    <span><i class="fa-solid fa-share-nodes fs-5 text-black"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-content px-3 h-100 d-flex flex-column justify-content-between">
+                <div class="links overflow-hidden">
+                  <ul class="ms-5 px-0 pt-5">
+                    <li id="search" class="mb-3 position-relative">Search</li>
+                    <li id="categories" class="mb-3 position-relative">Categories</li>
+                    <li id="area" class="mb-3 position-relative">Area</li>
+                    <li id="ingredients" class="mb-3 position-relative">Ingredients</li>
+                    <li id="contact" class="mb-3 position-relative">Contact Us</li>
+                  </ul>
+                </div>
+                <div class="copy-right">
+                  <div class="icons mb-2">
+                    <i class="fa-brands fa-facebook "></i>
+                    <i class="fa-brands fa-twitter "></i>
+                    <i class="fa-solid fa-globe "></i>
+                  </div>
+                  <p>Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="display py-3">
+          <div id="serch-box" class="container mx-auto row d-none">
+            <div class="byname col-6">
+              <input id="search-byname" type="text" class="form-control bg-black text-white" placeholder="Search By Name">
+            </div>
+            <div class="byfirst col-6">
+              <input id="first-litter" type="text" class="form-control bg-black text-white" maxlength="1" placeholder="Search By First Letter">
+            </div>
+          </div>
+          <div id="display-meals" class="container py-5">
+            <div class="row g-4">
+              
+            </div>
+          </div>
+        </div>
+        <div id="form" class="form container mt-5 pt-5 d-none">
+          <form class="row g-3 px-5">
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputName" placeholder="Enter Your Name">
+              <div class="invalid-feedback mt-2">
+                <div class="alert alert-danger text-center" role="alert">
+                  Special characters and numbers not allowed
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Enter Your Email">
+              <div class="invalid-feedback mt-2">
+                <div class="alert alert-danger text-center" role="alert">
+                  Email not valid *exemple@yyy.zzz
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="inputPhone" placeholder="Enter Your Phone">
+              <div class="invalid-feedback mt-2">
+                <div class="alert alert-danger text-center" role="alert">
+                  Enter valid Phone Number
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="number" class="form-control" id="inputAge" placeholder="Enter Your Age">
+              <div class="invalid-feedback mt-2">
+                <div class="alert alert-danger text-center" role="alert">
+                  Enter valid age
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="password" class="form-control" id="inputPassword" placeholder="Enter Your Password">
+              <div class="invalid-feedback mt-2">
+                <div class="alert alert-danger text-center" role="alert">
+                  Enter valid password *Minimum eight characters, at least one letter and one number:*
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <input type="password" class="form-control" id="inputRepassword" placeholder="Reassword">
+              <div class="invalid-feedback mt-2">
+                <div class="alert alert-danger text-center" role="alert">
+                  Enter valid repassword
+                </div>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button type="button" class="btn btn-outline-danger disabled" id="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/regex.js"></script>
+  </body>
+</html>
